@@ -4,10 +4,8 @@ let btnAdd = document.getElementById("btn-add");
 let main = document.getElementById("areaLista");
 
 function addTarefa() {
-  //PEGAR O VALOR DIGITADO NO INPUT
   let valorInput = input.value;
 
-  //SE NÃO FOR VAZIO, NEM NULO, NEM INDEFINIDO
   if (valorInput !== "" && valorInput !== null && valorInput !== undefined) {
     ++contador;
 
@@ -23,10 +21,8 @@ function addTarefa() {
         </div>
     </div>`;
 
-    //ADICIONAR NOVO ITEM NO MAIN
     main.innerHTML += novoItem;
 
-    //ZERAR OS CAMPINHOS
     input.value = "";
     input.focus();
   }
@@ -60,7 +56,6 @@ function marcarTarefa(id) {
 }
 
 input.addEventListener("keyup", function (event) {
-  //SE TECLOU ENTER (13)
   if (event.keyCode === 13) {
     event.preventDefault();
     btnAdd.click();
